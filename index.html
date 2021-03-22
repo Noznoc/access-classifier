@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    
+    <link href='css/index.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div id='layers' class='map-container'>
+        <strong>Towards Evaluating the Built-Environment for Accessibility: A Hybridized Approach for Identifying Buildings with Ramp Entrances</strong>
+        <p> Data sources included:</p>
+        <p> OpenStreetMap (OSM) extract (February 16, 2021). 794 polygons building=yes (random 400 + 394 wheelchair=yes)</p>
+        <p> Mapillary API requests (February 23 & March 1, 2021): Images by centroids derived from source (1), and Images by street segments</p>
+    </div>
+    <div id='legend' class='map-container'><div class='row'>
+				<div><span style='background-color: #00bbe0'></span>Mapillary Road Segments</div>
+				<div><span style='background-color: #e00070'></span>OpenStreetMap Building Footprints</div>
+			</div>
+    </div>
+    <div id="map"></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVsY29ueiIsImEiOiJja21sMXR1ZjIxNm4xMm5tbngxdGczczZ5In0.-fXyoPu2kySglMJDIS4D1A';
+      var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/julconz/ckmkz5tfu0v8e17n3h9pqa7n5', // style URL
+        center: [-75.7940,45.4169],
+				zoom: 1,
+				maxZoom: 14,
+				minZoom: 1,
+				maxBounds: [-76.2098,45.1225,-75.2565,45.6442]
+      });
+
+      map.addControl(new mapboxgl.ScaleControl({position: 'bottom-right'}));
+    </script>
+  </body>
+</html>
