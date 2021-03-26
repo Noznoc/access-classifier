@@ -1,4 +1,4 @@
-# access-classifier
+# Towards Evaluating the Built-Environment for Accessibility: A Hybridized Approach for Identifying Buildings with Ramp Entrances
 
 Preprocessing and modeling scripts for Carleton University DATA 500 course project. Project objectives are to develop a CNN classifer for predicting whether an image is "accessible" or "inaccessible".
 
