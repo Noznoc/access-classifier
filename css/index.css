@@ -10,8 +10,8 @@ body {
 }
 
 a {
-  /*text-decoration: underline !important;
-  text-decoration-color: #4CAF50 !important;*/
+  text-decoration: white !important;
+  text-decoration-color: white !important;
   border-bottom: 2px solid white;
   color:white !important;
   line-height: 15px;
