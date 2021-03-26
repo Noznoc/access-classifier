@@ -11,18 +11,18 @@
   </head>
   <body>
     <div id='layers' class='map-container'>
-        <strong>Towards Evaluating the Built-Environment for Accessibility: A Hybridized Approach for Identifying Buildings with Ramp Entrances</strong>
-        <p> Data sources included:</p>
-        <p><span style='background-color: #ea80fc'></span><strong> OpenStreetMap (OSM) extract: </strong>Retrieved 794 polygons building=yes (random 400 + 394 “wheelchair=yes” AND “building=yes” tags).</p>
-        <p> <span style='background-color: #fdd71c'></span> <strong>Mapillary API requests: </strong>Retrieved total of ~12,810 images. First, by source (1) centroids. Then, to increase the dataset, images were retrieved from segments based on local knowledge.</p>
+        <!-- <strong>Towards Evaluating the Built-Environment for Accessibility: A Hybridized Approach for Identifying Buildings with Ramp Entrances</strong> -->
+        <p>Visualization of spatial distribution of geographic information used for compiling Mapillary images.</p>
+        <p><span style='background-color: #ea80fc'></span><strong> OpenStreetMap (OSM) extract: </strong>Retrieved 794 building footprints (random 400 + 394 “wheelchair=yes” AND “building=yes” tags).</p>
+        <p> <span style='background-color: #fdd71c'></span> <strong>Mapillary API requests: </strong>Retrieved total of ~12,810 images. First, by source (1) centroids. Then, to increase the dataset, images were retrieved from road segments based on local knowledge.</p>
     </div>
     <div id="map"></div>
     <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoianVsY29ueiIsImEiOiJja21sMXR1ZjIxNm4xMm5tbngxdGczczZ5In0.-fXyoPu2kySglMJDIS4D1A';
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVsY29ueiIsImEiOiJja21sMXR1ZjIxNm4xMm5tbngxdGczczZ5In0.-fXyoPu2kySglMJDIS4D1A'; // temp key
       var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/julconz/ckmnjp4zo22xq17ma2l9oz4pm', // style URL
-        center: [-75.7940,45.4169],
+        center: [-75.7229,45.4793],
 				zoom: 1,
 				maxZoom: 14,
 				minZoom: 1,
